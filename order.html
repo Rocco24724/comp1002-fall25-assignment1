@@ -1,22 +1,27 @@
+<!-- Sets the doctype to english and sets it to the english -->
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Some of the meta data is stored in the head element -->
 <head>
   <meta charset="UTF-8" />
   <title>The HTML Pizza Company (Order)</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
+<!-- The main content of the webpage is stored in the body element -->
 <body>
   <header>
     <img src="images/Logo.png" alt="Pizza Logo" />
         <!-- Image credit: Pizza Logo with Text by j4p4n (https://openclipart.org/detail/341088/pizza-logo-with-text) -->
         <h1>The HTML Pizza Company</h1>
   </header>
-  <main>
+  <main class="ordering">
     <!-- Form to select both the shape and size of the pizza using both raido buttons and a list -->
         <fieldset>
             <legend>Pizza Shape and Size</legend>
             <label for="size"> Select Size:</label>
-            <select if="size" name="size">
+            <select id="size" name="size">
                 <option value="small">Small (6 slices) $7.99</option>
                 <option value="medium">Medium (8 slices) $9.99</option>
                 <option value="large">Large (12 slices) $12.99</option>
@@ -43,7 +48,7 @@
         <fieldset>
             <legend>Pizza Crust</legend>
             <label for="crust"> Select Pizza Crust Type:</label>
-            <select if="crust" name="crust">
+            <select id="crust" name="crust">
                 <option value="regular">Regular</option>
                 <option value="deep">Deep Dish</option>
                 <option value="thin">Thin Crust</option>
@@ -59,6 +64,18 @@
             <label><input type="radio" name="dining" value="takeout"/>Takeout</label>
             <label><input type="radio" name="dining" value="delivery"/>Delivery</label>
         </fieldset>
+
+        <!-- Text area for anything extra that needs to be shared -->
+        <fieldset>
+            <legend>Special Instructions</legend>
+            <label for="instructions">Add any special requests:</label><br />
+            <textarea id="instructions" name="instructions" rows="4" cols="100" placeholder="Extra napkins, Dont ring door bell, etc..."></textarea>
+        </fieldset>
+
+        <!-- Button that confirms the users order and brings them to a different hmtl page showing the order and final cost-->
+        <form action="summary.html" method="GET">
+            <button type="confirm">Confirm Order</button>
+        </form>
   </main>
   <footer>
     <p><small>Contact Us if You Have Any Problems</small></p>
