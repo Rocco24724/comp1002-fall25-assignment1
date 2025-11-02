@@ -20,17 +20,41 @@
         <!-- Form to select both the shape and size of the pizza using both raido buttons and a list -->
         <fieldset>
             <legend>Pizza Shape and Size</legend>
-
             <label for="size"> Select Size:</label>
             <select if="size" name="size">
-                <option value="small">Small (6 slices)</option>
-                <option value="medium">Medium (8 slices)</option>
-                <option value="large">Large (12 slices)</option>
+                <option value="small">Small (6 slices) $7.99</option>
+                <option value="medium">Medium (8 slices) $9.99</option>
+                <option value="large">Large (12 slices) $12.99</option>
+                <option value="large">Party (18 slices) $16.99</option>
             </select>
             <p>Select Shape:</p>
             <label><input type="radio" name="shape" value="round"/>Round</label>
             <label><input type="radio" name="shape" value="square"/>Square</label>
-        </fieldset>    
+        </fieldset>
+        
+        <!-- Check box for picking which toppings you would like -->
+        <fieldset>
+            <legend>Pizza Toppings (First 3 Toppings Free, $1.50 Charge Per Topping Above 3)</legend>
+            <label><input type="checkbox" name="toppings" value="pepperoni" />Pepperoni</label>
+            <label><input type="checkbox" name="toppings" value="sausage" />Sausage</label>
+            <label><input type="checkbox" name="toppings" value="chicken" />Chicken</label>
+            <label><input type="checkbox" name="toppings" value="mushroom" />Mushrooms</label>
+            <label><input type="checkbox" name="toppings" value="onion" />Onions</label>
+            <label><input type="checkbox" name="toppings" value="pepper" />Peppers</label>
+            <label><input type="checkbox" name="toppings" value="cheese" />Extra Cheese</label>
+        </fieldset>
+
+        <!-- Form to select the pizza crust-->
+        <fieldset>
+            <legend>Pizza Crust</legend>
+            <label for="crust"> Select Pizza Crust Type:</label>
+            <select if="crust" name="crust">
+                <option value="regular">Regular</option>
+                <option value="deep">Deep Dish</option>
+                <option value="thin">Thin Crust</option>
+                <option value="stuffted">Stuffted Crust ($2.50 Extra)</option>
+            </select>
+        </fieldset>
     </main>
     <footer>
 
