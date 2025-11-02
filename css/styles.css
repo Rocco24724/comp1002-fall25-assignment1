@@ -1,15 +1,13 @@
-/*Style Sheet that targets the html element*/
-html
+/*Style Sheet that targets the html and body element*/
+html, body
 {
+    height: 100%;
     background-color: #DBD5D5;
-}
-
-body
-{
-    /*Used to make my backgrounds go from edge to edge of the webpage*/
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 
 /*Style Sheet that targets the h1 element within the header element*/
 header h1
@@ -32,7 +30,50 @@ header
     padding: 20px;
 }
 
+main img
+{
+    height: 699px;
+    display: block;
+}
+
+/*Makes the pizza ad and order button on the same level*/
+.button-ad
+{
+    display: flex;
+    align-items: center;
+    gap: 275px
+}
+
+/* Chnages the style for the button*/
+.button
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100px;
+    color: yellow;
+    background-color: green;
+    padding: 100px
+}
+
+/*Makes the background of the menu page green */
+.menu
+{
+    background-color: green;
+}
+
 header img
 {
     height: 120px
+}
+
+/*This lets the main take up all the space between the header and footer I did this because I want the footer to go to the bottom*/
+main
+{
+    flex: 1;
+}
+
+/*Style Sheet that targets the footer element*/
+footer
+{
+    background-color: green;
+    color:yellow;
 }
