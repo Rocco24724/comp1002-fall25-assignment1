@@ -4,22 +4,35 @@ html
     background-color: #DBD5D5;
 }
 
-/*Style Sheet that targets the h1 element*/
-h1
-{
-    /*Used for the text "The HTML Pizza Company*/
-    color: white;
-    text-align: center;
-    font-weight: bold;
-
-    /*Used for the background of the text*/
-    margin: 0;
-    background-color: #1E6CC7;
-    padding: 30px
-}
-
 body
 {
     /*Used to make my backgrounds go from edge to edge of the webpage*/
     margin: 0;
+}
+
+
+/*Style Sheet that targets the h1 element within the header element*/
+header h1
+{
+    /*Used for the text "The HTML Pizza Company*/
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/*Makes both the text and the image stay at the top like you would see on a real website (I used the dominos website for inspiration)*/
+/*For this header I was unsure on how to do it how I wanted to so I asked Microsoft Copilot to explain to me how it's done*/
+/*The (display: flex;) makes them become flex items which makes it much eaiser to space a group of things */
+header
+{
+    display: flex;
+    align-items: center;
+    background-color: green;
+    padding: 20px;
+}
+
+header img
+{
+    height: 120px
 }
