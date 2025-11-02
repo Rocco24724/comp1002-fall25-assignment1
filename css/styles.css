@@ -1,0 +1,13 @@
+/*Style Sheet that targets the html element*/
+html
+{
+    background-color: #DBD5D5;
+}
+
+/*Style Sheet that targets the h1 element*/
+h1
+{
+    color: #EB9C28;
+    text-align: center;
+    font-weight: bold;
+}
