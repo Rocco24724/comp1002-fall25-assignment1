@@ -17,8 +17,20 @@
         <h1>The HTML Pizza Company</h1>
     </header>
     <main>
-        
+        <!-- Form to select both the shape and size of the pizza using both raido buttons and a list -->
+        <fieldset>
+            <legend>Pizza Shape and Size</legend>
 
+            <label for="size"> Select Size:</label>
+            <select if="size" name="size">
+                <option value="small">Small (6 slices)</option>
+                <option value="medium">Medium (8 slices)</option>
+                <option value="large">Large (12 slices)</option>
+            </select>
+            <p>Select Shape:</p>
+            <label><input type="radio" name="shape" value="round"/>Round</label>
+            <label><input type="radio" name="shape" value="square"/>Square</label>
+        </fieldset>    
     </main>
     <footer>
 
