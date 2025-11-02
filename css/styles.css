@@ -7,7 +7,19 @@ html
 /*Style Sheet that targets the h1 element*/
 h1
 {
-    color: #EB9C28;
+    /*Used for the text "The HTML Pizza Company*/
+    color: white;
     text-align: center;
     font-weight: bold;
+
+    /*Used for the background of the text*/
+    margin: 0;
+    background-color: #1E6CC7;
+    padding: 30px
+}
+
+body
+{
+    /*Used to make my backgrounds go from edge to edge of the webpage*/
+    margin: 0;
 }
