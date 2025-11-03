@@ -16,8 +16,49 @@
     <!-- Image credit: Pizza Logo with Text by j4p4n (https://openclipart.org/detail/341088/pizza-logo-with-text) -->
     <h1>The HTML Pizza Company</h1>
   </header>
+  <h2> Order Summary</h2>
   <main>
+    <!-- Didn't know how to take what the user put and put into the summary screen so I asked Microsoft Copiolt to explain it to me -->
+    <!-- The div is for grouping the order so I can use Java Script on it-->
+    <div id="order-details" class="order-details"></div>
+    <script>
+        //This is Java code and it let's me get data from the GET I put on my form in the order page
+        const params = new URLSearchParams(window.location.search);
 
+        //This is Java code that grabs the values of the different choices
+        const size = params.get("size");
+        const shape = params.get("shape");
+        const crust = params.get("crust");
+        const dining = params.get("dining");
+        const instructions = params.get("instructions");
+        const toppings = params.getAll("toppings");
+
+        //This is Java code that sets the price of the pizza based on the size you picked
+        let basePrice = 
+        {
+            Small: 7.99,
+            Medium: 9.99,
+            Large: 12.99,
+            Party: 16.99
+        }[size] || 0;
+
+        //This is Java code that does the math to add the extra costs of if you picked stuffed crust and if you have more than 3 toppings
+        let crustPrice = crust === "Stuffed" ? 2.5 : 0;
+        let toppingCharge = Math.max(0, toppings.length - 3) * 1.5;
+        let total = basePrice + crustPrice + toppingCharge;
+
+        //This is Java code that prints out all of the choices of the user (Extra steps for toppings because you can pick more than 1 and sets the price to only 2 decimal places)
+        document.getElementById("order-details").innerHTML = 
+        `
+            <p><strong>Size:</strong> ${size}</p>
+            <p><strong>Shape:</strong> ${shape}</p>
+            <p><strong>Crust:</strong> ${crust}</p>
+            <p><strong>Dining Option:</strong> ${dining}</p>
+            <p><strong>Toppings:</strong> ${toppings.join(", ")}</p>
+            <p><strong>Special Instructions:</strong> ${instructions}</p>
+            <p><strong>Total Price:</strong> $${total.toFixed(2)}</p>
+        `;
+    </script>
   </main>
   <footer>
     <p><small>Contact Us if You Have Any Problems</small></p>

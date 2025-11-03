@@ -17,31 +17,34 @@
         <h1>The HTML Pizza Company</h1>
   </header>
   <main class="ordering">
+    <!-- Button that confirms the users order and brings them to a different hmtl page showing the order and final cost-->
+    <form action="summary.html" method="GET">
+
     <!-- Form to select both the shape and size of the pizza using both raido buttons and a list -->
         <fieldset>
             <legend>Pizza Shape and Size</legend>
             <label for="size"> Select Size:</label>
             <select id="size" name="size">
-                <option value="small">Small (6 slices) $7.99</option>
-                <option value="medium">Medium (8 slices) $9.99</option>
-                <option value="large">Large (12 slices) $12.99</option>
-                <option value="large">Party (18 slices) $16.99</option>
+                <option value="Small">Small (6 slices) $7.99</option>
+                <option value="Medium">Medium (8 slices) $9.99</option>
+                <option value="Large">Large (12 slices) $12.99</option>
+                <option value="Party">Party (18 slices) $16.99</option>
             </select>
             <p>Select Shape:</p>
-            <label><input type="radio" name="shape" value="round"/>Round</label>
-            <label><input type="radio" name="shape" value="square"/>Square</label>
+            <label><input type="radio" name="shape" value="Round"/>Round</label>
+            <label><input type="radio" name="shape" value="Square"/>Square</label>
         </fieldset>
         
         <!-- Check box for picking which toppings you would like -->
         <fieldset>
             <legend>Pizza Toppings (First 3 Toppings Free, $1.50 Charge Per Topping Above 3)</legend>
-            <label><input type="checkbox" name="toppings" value="pepperoni" />Pepperoni</label>
-            <label><input type="checkbox" name="toppings" value="sausage" />Sausage</label>
-            <label><input type="checkbox" name="toppings" value="chicken" />Chicken</label>
-            <label><input type="checkbox" name="toppings" value="mushroom" />Mushrooms</label>
-            <label><input type="checkbox" name="toppings" value="onion" />Onions</label>
-            <label><input type="checkbox" name="toppings" value="pepper" />Peppers</label>
-            <label><input type="checkbox" name="toppings" value="cheese" />Extra Cheese</label>
+            <label><input type="checkbox" name="toppings" value="Pepperoni" />Pepperoni</label>
+            <label><input type="checkbox" name="toppings" value="Sausage" />Sausage</label>
+            <label><input type="checkbox" name="toppings" value="Chicken" />Chicken</label>
+            <label><input type="checkbox" name="toppings" value="Mushroom" />Mushrooms</label>
+            <label><input type="checkbox" name="toppings" value="Onion" />Onions</label>
+            <label><input type="checkbox" name="toppings" value="Pepper" />Peppers</label>
+            <label><input type="checkbox" name="toppings" value="Cheese" />Extra Cheese</label>
         </fieldset>
 
         <!-- Form to select the pizza crust-->
@@ -49,10 +52,10 @@
             <legend>Pizza Crust</legend>
             <label for="crust"> Select Pizza Crust Type:</label>
             <select id="crust" name="crust">
-                <option value="regular">Regular</option>
-                <option value="deep">Deep Dish</option>
-                <option value="thin">Thin Crust</option>
-                <option value="stuffted">Stuffted Crust ($2.50 Extra)</option>
+                <option value="Regular">Regular</option>
+                <option value="Deep Dish">Deep Dish</option>
+                <option value="Thin">Thin Crust</option>
+                <option value="Stuffed">Stuffed Crust ($2.50 Extra)</option>
             </select>
         </fieldset>
 
@@ -60,9 +63,9 @@
         <fieldset>
             <legend>Dining Options</legend>
             <p>How Would You Like to Get Your Pizza:</p>
-            <label><input type="radio" name="dining" value="in"/>Eat In</label>
-            <label><input type="radio" name="dining" value="takeout"/>Takeout</label>
-            <label><input type="radio" name="dining" value="delivery"/>Delivery</label>
+            <label><input type="radio" name="dining" value="Eat In"/>Eat In</label>
+            <label><input type="radio" name="dining" value="Takeout"/>Takeout</label>
+            <label><input type="radio" name="dining" value="Delivery"/>Delivery</label>
         </fieldset>
 
         <!-- Text area for anything extra that needs to be shared -->
@@ -71,11 +74,8 @@
             <label for="instructions">Add any special requests:</label><br />
             <textarea id="instructions" name="instructions" rows="4" cols="100" placeholder="Extra napkins, Dont ring door bell, etc..."></textarea>
         </fieldset>
-
-        <!-- Button that confirms the users order and brings them to a different hmtl page showing the order and final cost-->
-        <form action="summary.html" method="GET">
-            <button type="confirm">Confirm Order</button>
-        </form>
+        <button type="submit">Confirm Order</button>
+    </form>
   </main>
   <footer>
     <p><small>Contact Us if You Have Any Problems</small></p>
